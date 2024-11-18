@@ -27,14 +27,17 @@
     %filecolor=magenta,      
    % urlcolor={mypink1} 
 %}
-
-\usepackage{fontawesome}
+% \usepackage{fontawesome}
+\usepackage{fontawesome5}
+\usepackage{tabularx}
+% \usepackage{fontspec}
+% \newfontface\FA{./fonts/FontAwesome.ttf}[Contextuals={WordInitial,WordFinal}]
 
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
 % Specify the location of the included fonts
-\fontdir[fonts/]
+% \fontdir[./fonts/]
 
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
@@ -63,14 +66,14 @@
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
 % \photo{./examples/profile.png}
-\name{Hongtao}{Hao}
-%\position{Research Assistant{\enskip\cdotp\enskip}Indiana University}
-%\address{42-8, Bangbae-ro 15-gil, Seocho-gu, Seoul, 00681, Rep. of KOREA}
+\name{Mortaza}{Hassani}
+% \position{PhD Applicant} %{Research Assistant{\enskip\cdotp\enskip}Indiana University}
+\address{Avenue Paul Heger 22, Brussels 1000, Belgium}
 
-\email{hongtao@example.com}
-\homepage{www.hongtaoh.com}
-\github{hongtaoh}
-%\linkedin{posquit0}
+\email{mortaza.hassani@ulb.be}
+% \homepage{linkedin.com/in/MortazaHassani}
+\github{MortazaHassani}
+\linkedin{MortazaHassani}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
@@ -96,7 +99,7 @@
 % Leave any of these blank if they are not needed
 \makecvfooter
   {\today}
-  {Hongtao Hao~~~·~~~Curriculum Vitae}
+  {Mortaza Hassani~~~·~~~Curriculum Vitae}
   {\thepage}
 
 
@@ -105,15 +108,22 @@
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
 \input{cv/education.tex}
-\input{cv/appointment.tex}
-\input{cv/honors.tex}
+% \input{cv/appointment.tex}
+\input{cv/interests.tex}
+\input{cv/skills.tex}
 \input{cv/working.tex}
 \input{cv/teaching}
+
+\input{cv/honors.tex}
+
 \input{cv/projects.tex}
-\input{cv/writing.tex}
-\input{cv/skills.tex}
-\input{cv/conference}
-%\input{cv/committees.tex}
+\input{cv/extracurricular.tex}
+
+\input{cv/languages.tex}
+% \input{cv/writing.tex}
+
+% \input{cv/conference}
+% \input{cv/committees.tex}
 
 
 %-------------------------------------------------------------------------------

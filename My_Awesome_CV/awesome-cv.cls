@@ -74,7 +74,7 @@
 \RequirePackage{unicode-math}
 % Needed to use icons from font-awesome
 % (https://github.com/posquit0/latex-fontawesome)
-\RequirePackage{fontawesome}
+\RequirePackage{fontawesome5}
 \RequirePackage[default,opentype]{sourcesanspro}
 % Needed for the photo ID
 \RequirePackage[skins]{tcolorbox}
@@ -495,7 +495,7 @@
         {}%
         {%
           \ifbool{isstart}{\setbool{isstart}{false}}{\acvHeaderSocialSep}%
-          \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedinSquare\acvHeaderIconSep\@linkedin}%
+          \href{https://www.linkedin.com/in/\@linkedin}{\faLinkedin\acvHeaderIconSep\@linkedin}%
         }%
       \ifthenelse{\isundefined{\@twitter}}%
         {}%
@@ -678,9 +678,9 @@
   \vspace{\acvSectionContentTopSkip}
   \vspace{-2.0mm}
   \begin{center}
-    \setlength\tabcolsep{1ex}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
+    \setlength\tabcolsep{0pt}
+    \setlength{\extrarowheight}{2pt} % Add a little space between rows
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth - 3.5cm}}
 }{%
     \end{tabular*}
   \end{center}
@@ -688,8 +688,9 @@
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}
 \newcommand*{\cvskill}[2]{%
-	\skilltypestyle{#1} & \skillsetstyle{#2} \\
+  \skilltypestyle{#1} & \skillsetstyle{#2} \\
 }
+
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
@@ -704,6 +705,27 @@
   \vspace{-4.0mm}
 }
 
+% Define an environment for languages
+% \newenvironment{languages}{%
+%   \vspace{\acvSectionContentTopSkip}
+%   \begin{center}
+%     \begin{tabular}{@{}p{0.3\textwidth}p{0.3\textwidth}p{0.3\textwidth}@{}}
+% }{%
+%     \end{tabular}
+%   \end{center}
+% }
+
+% Define a command for language proficiency bar
+\newcommand{\languagebar}[4]{
+    \textbf{#1:} #2\\
+    \begin{tikzpicture}
+        % Background bar (gray)
+        \fill[color=gray!30] (0,0) rectangle (3,0.2);
+        % Progress bar (black)
+        \fill[color=black] (0,0) rectangle (#3,0.2);
+    \end{tikzpicture}\\
+    \textit{#4}
+}
 
 %-------------------------------------------------------------------------------
 %                Commands for elements of Cover Letter
