@@ -727,6 +727,13 @@
     \textit{#4}
 }
 
+% Define a command for reference
+
+\newcommand{\reference}[3]{
+  \textbf{#1}\\ \textit{#2} \\ \href{mailto:#3}{#3}\\
+
+
+}
 %-------------------------------------------------------------------------------
 %                Commands for elements of Cover Letter
 %-------------------------------------------------------------------------------
